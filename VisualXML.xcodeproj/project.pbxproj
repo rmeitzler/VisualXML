@@ -12,6 +12,7 @@
 		743500DD26D0BC2E00A2915E /* SearchResultsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500DC26D0BC2E00A2915E /* SearchResultsHeader.swift */; };
 		743500DF26D0D3F200A2915E /* VXMLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500DE26D0D3F200A2915E /* VXMLViewModel.swift */; };
 		743500E326D160FB00A2915E /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500E226D160FB00A2915E /* Array+Extensions.swift */; };
+		743500FD26D18A0100A2915E /* FirehouseModel in Frameworks */ = {isa = PBXBuildFile; productRef = 743500FC26D18A0100A2915E /* FirehouseModel */; };
 		743F01DF26A084E70044D52B /* WebLayout.xml in Resources */ = {isa = PBXBuildFile; fileRef = 743F01DE26A084E70044D52B /* WebLayout.xml */; };
 		743F01E426A0EF0A0044D52B /* WebLayout2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 743F01E326A0EF0A0044D52B /* WebLayout2.xml */; };
 		743F01E726A1FFA10044D52B /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 743F01E626A1FFA10044D52B /* XMLCoder */; };
@@ -109,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				743F01E726A1FFA10044D52B /* XMLCoder in Frameworks */,
+				743500FD26D18A0100A2915E /* FirehouseModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +251,7 @@
 			name = VisualXML;
 			packageProductDependencies = (
 				743F01E626A1FFA10044D52B /* XMLCoder */,
+				743500FC26D18A0100A2915E /* FirehouseModel */,
 			);
 			productName = VisualXML;
 			productReference = 74CD726726A0839200C8DC1B /* VisualXML.app */;
@@ -279,6 +282,7 @@
 			mainGroup = 74CD725E26A0839200C8DC1B;
 			packageReferences = (
 				743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */,
 			);
 			productRefGroup = 74CD726826A0839200C8DC1B /* Products */;
 			projectDirPath = "";
@@ -538,6 +542,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rmeitzler/FirehouseModel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MaxDesiatov/XMLCoder.git";
@@ -549,6 +561,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		743500FC26D18A0100A2915E /* FirehouseModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */;
+			productName = FirehouseModel;
+		};
 		743F01E626A1FFA10044D52B /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */;

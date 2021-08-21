@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import XMLTree
 
 class VXMLViewModel: ObservableObject {
   @Published var xmlModel: [XMLTree] = []

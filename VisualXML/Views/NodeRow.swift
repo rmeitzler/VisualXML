@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import XMLTree
 
 struct NodeRow: View {
   @ObservedObject var viewModel: VXMLViewModel

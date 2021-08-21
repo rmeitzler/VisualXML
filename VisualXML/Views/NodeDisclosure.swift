@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import XMLTree
 
 struct NodeDisclosure: View {
   @ObservedObject var viewModel: VXMLViewModel
