@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741803AF26D5FE2C004B3E6C /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741803AD26D5EC3A004B3E6C /* ModelManager.swift */; };
+		7424848B26DA824100DD846D /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424848A26DA824100DD846D /* SearchRequest.swift */; };
+		7424848E26DA97A800DD846D /* XMLTree in Frameworks */ = {isa = PBXBuildFile; productRef = 7424848D26DA97A800DD846D /* XMLTree */; };
+		7424849226DC445000DD846D /* KHWeb_formatted.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7424849126DC445000DD846D /* KHWeb_formatted.xml */; };
 		743500D926D0B11000A2915E /* NodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500D826D0B11000A2915E /* NodeRow.swift */; };
 		743500DB26D0B31B00A2915E /* NodeDisclosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500DA26D0B31B00A2915E /* NodeDisclosure.swift */; };
 		743500DD26D0BC2E00A2915E /* SearchResultsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500DC26D0BC2E00A2915E /* SearchResultsHeader.swift */; };
@@ -14,8 +18,6 @@
 		743500E326D160FB00A2915E /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743500E226D160FB00A2915E /* Array+Extensions.swift */; };
 		743500FD26D18A0100A2915E /* FirehouseModel in Frameworks */ = {isa = PBXBuildFile; productRef = 743500FC26D18A0100A2915E /* FirehouseModel */; };
 		743F01DF26A084E70044D52B /* WebLayout.xml in Resources */ = {isa = PBXBuildFile; fileRef = 743F01DE26A084E70044D52B /* WebLayout.xml */; };
-		743F01E426A0EF0A0044D52B /* WebLayout2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 743F01E326A0EF0A0044D52B /* WebLayout2.xml */; };
-		743F01E726A1FFA10044D52B /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 743F01E626A1FFA10044D52B /* XMLCoder */; };
 		743F01EC26A4DFE40044D52B /* FirehouseWebMenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F01EB26A4DFE40044D52B /* FirehouseWebMenuVM.swift */; };
 		743F01F026A4E1C80044D52B /* RAW_Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F01EF26A4E1C80044D52B /* RAW_Layout.swift */; };
 		743F01F226A4E35F0044D52B /* RAW_MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F01F126A4E35F0044D52B /* RAW_MenuItem.swift */; };
@@ -49,6 +51,7 @@
 		743F022C26A4E6FD0044D52B /* RAW_ModifierActionMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F022B26A4E6FD0044D52B /* RAW_ModifierActionMaps.swift */; };
 		743F022E26A4E7160044D52B /* RAW_ModifierAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F022D26A4E7160044D52B /* RAW_ModifierAction.swift */; };
 		743F023026A4E7370044D52B /* RAW_PizzaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F022F26A4E7370044D52B /* RAW_PizzaConfig.swift */; };
+		74CA041B26F5061D00B0A8DB /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CA041A26F5061D00B0A8DB /* SearchHistoryView.swift */; };
 		74CD726B26A0839200C8DC1B /* VisualXMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD726A26A0839200C8DC1B /* VisualXMLApp.swift */; };
 		74CD726D26A0839200C8DC1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD726C26A0839200C8DC1B /* ContentView.swift */; };
 		74CD726F26A0839300C8DC1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD726E26A0839300C8DC1B /* Assets.xcassets */; };
@@ -56,13 +59,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		741803AD26D5EC3A004B3E6C /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		7424848A26DA824100DD846D /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		7424849126DC445000DD846D /* KHWeb_formatted.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KHWeb_formatted.xml; sourceTree = "<group>"; };
 		743500D826D0B11000A2915E /* NodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRow.swift; sourceTree = "<group>"; };
 		743500DA26D0B31B00A2915E /* NodeDisclosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeDisclosure.swift; sourceTree = "<group>"; };
 		743500DC26D0BC2E00A2915E /* SearchResultsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsHeader.swift; sourceTree = "<group>"; };
 		743500DE26D0D3F200A2915E /* VXMLViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXMLViewModel.swift; sourceTree = "<group>"; };
 		743500E226D160FB00A2915E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		743F01DE26A084E70044D52B /* WebLayout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WebLayout.xml; sourceTree = "<group>"; };
-		743F01E326A0EF0A0044D52B /* WebLayout2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WebLayout2.xml; sourceTree = "<group>"; };
 		743F01EB26A4DFE40044D52B /* FirehouseWebMenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirehouseWebMenuVM.swift; sourceTree = "<group>"; };
 		743F01EF26A4E1C80044D52B /* RAW_Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAW_Layout.swift; sourceTree = "<group>"; };
 		743F01F126A4E35F0044D52B /* RAW_MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAW_MenuItem.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		743F022B26A4E6FD0044D52B /* RAW_ModifierActionMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAW_ModifierActionMaps.swift; sourceTree = "<group>"; };
 		743F022D26A4E7160044D52B /* RAW_ModifierAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAW_ModifierAction.swift; sourceTree = "<group>"; };
 		743F022F26A4E7370044D52B /* RAW_PizzaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAW_PizzaConfig.swift; sourceTree = "<group>"; };
+		74CA041A26F5061D00B0A8DB /* SearchHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		74CD726726A0839200C8DC1B /* VisualXML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualXML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CD726A26A0839200C8DC1B /* VisualXMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualXMLApp.swift; sourceTree = "<group>"; };
 		74CD726C26A0839200C8DC1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743F01E726A1FFA10044D52B /* XMLCoder in Frameworks */,
+				7424848E26DA97A800DD846D /* XMLTree in Frameworks */,
 				743500FD26D18A0100A2915E /* FirehouseModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				74CD726C26A0839200C8DC1B /* ContentView.swift */,
+				74CA041A26F5061D00B0A8DB /* SearchHistoryView.swift */,
 				743500DA26D0B31B00A2915E /* NodeDisclosure.swift */,
 				743500D826D0B11000A2915E /* NodeRow.swift */,
 				743500DC26D0BC2E00A2915E /* SearchResultsHeader.swift */,
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				743F01EE26A4E19A0044D52B /* FireHouse Raw Models */,
+				7424848A26DA824100DD846D /* SearchRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				743F01EB26A4DFE40044D52B /* FirehouseWebMenuVM.swift */,
 				743500DE26D0D3F200A2915E /* VXMLViewModel.swift */,
+				741803AD26D5EC3A004B3E6C /* ModelManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,7 +198,6 @@
 			children = (
 				74CD726926A0839200C8DC1B /* VisualXML */,
 				74CD726826A0839200C8DC1B /* Products */,
-				92A596136A98267E7484F5EA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,7 +212,7 @@
 		74CD726926A0839200C8DC1B /* VisualXML */ = {
 			isa = PBXGroup;
 			children = (
-				743F01E326A0EF0A0044D52B /* WebLayout2.xml */,
+				7424849126DC445000DD846D /* KHWeb_formatted.xml */,
 				743F01DE26A084E70044D52B /* WebLayout.xml */,
 				74CD726A26A0839200C8DC1B /* VisualXMLApp.swift */,
 				743500D726D0B0ED00A2915E /* Views */,
@@ -226,13 +234,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		92A596136A98267E7484F5EA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,8 +251,8 @@
 			);
 			name = VisualXML;
 			packageProductDependencies = (
-				743F01E626A1FFA10044D52B /* XMLCoder */,
 				743500FC26D18A0100A2915E /* FirehouseModel */,
+				7424848D26DA97A800DD846D /* XMLTree */,
 			);
 			productName = VisualXML;
 			productReference = 74CD726726A0839200C8DC1B /* VisualXML.app */;
@@ -281,8 +282,8 @@
 			);
 			mainGroup = 74CD725E26A0839200C8DC1B;
 			packageReferences = (
-				743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */,
+				7424848C26DA97A800DD846D /* XCRemoteSwiftPackageReference "XMLTree" */,
 			);
 			productRefGroup = 74CD726826A0839200C8DC1B /* Products */;
 			projectDirPath = "";
@@ -301,7 +302,7 @@
 				743F01DF26A084E70044D52B /* WebLayout.xml in Resources */,
 				74CD727226A0839300C8DC1B /* Preview Assets.xcassets in Resources */,
 				74CD726F26A0839300C8DC1B /* Assets.xcassets in Resources */,
-				743F01E426A0EF0A0044D52B /* WebLayout2.xml in Resources */,
+				7424849226DC445000DD846D /* KHWeb_formatted.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +318,7 @@
 				743F020A26A4E5390044D52B /* RAW_SubMenusObj.swift in Sources */,
 				743F020226A4E4BC0044D52B /* RAW_MenuInclusion.swift in Sources */,
 				743F021C26A4E64B0044D52B /* RAW_Options.swift in Sources */,
+				7424848B26DA824100DD846D /* SearchRequest.swift in Sources */,
 				743F01F826A4E4050044D52B /* RAW_SalesItem.swift in Sources */,
 				743F020026A4E4A10044D52B /* RAW_Menu.swift in Sources */,
 				743500E326D160FB00A2915E /* Array+Extensions.swift in Sources */,
@@ -343,6 +345,8 @@
 				743F022A26A4E6E30044D52B /* RAW_Restriction.swift in Sources */,
 				743F01FC26A4E4660044D52B /* RAW_SalesItemOption.swift in Sources */,
 				743F01F626A4E3E80044D52B /* RAW_SalesItems.swift in Sources */,
+				74CA041B26F5061D00B0A8DB /* SearchHistoryView.swift in Sources */,
+				741803AF26D5FE2C004B3E6C /* ModelManager.swift in Sources */,
 				743500D926D0B11000A2915E /* NodeRow.swift in Sources */,
 				743F01FA26A4E44D0044D52B /* RAW_SalesItemOptions.swift in Sources */,
 				743F020626A4E4EE0044D52B /* RAW_MenuSubmenus.swift in Sources */,
@@ -542,6 +546,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7424848C26DA97A800DD846D /* XCRemoteSwiftPackageReference "XMLTree" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rmeitzler/XMLTree";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
 		743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rmeitzler/FirehouseModel";
@@ -550,26 +562,18 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MaxDesiatov/XMLCoder.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7424848D26DA97A800DD846D /* XMLTree */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7424848C26DA97A800DD846D /* XCRemoteSwiftPackageReference "XMLTree" */;
+			productName = XMLTree;
+		};
 		743500FC26D18A0100A2915E /* FirehouseModel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 743500FB26D18A0100A2915E /* XCRemoteSwiftPackageReference "FirehouseModel" */;
 			productName = FirehouseModel;
-		};
-		743F01E626A1FFA10044D52B /* XMLCoder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 743F01E526A1FFA10044D52B /* XCRemoteSwiftPackageReference "XMLCoder" */;
-			productName = XMLCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

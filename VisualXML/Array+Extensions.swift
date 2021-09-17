@@ -13,3 +13,17 @@ extension Sequence where Iterator.Element: Hashable {
         return filter { seen.insert($0).inserted }
     }
 }
+
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
+    }
+}

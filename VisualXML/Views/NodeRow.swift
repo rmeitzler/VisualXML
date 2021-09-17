@@ -22,9 +22,7 @@ struct NodeRow: View {
         HStack(alignment: (item.nameAttribute != nil) ? .top : .center) {
           
           VStack(alignment: .leading) {
-            if let named = item.nameAttribute {
-              Text("\(named) (\(item.idAttribute ?? "n/a"))")
-            }
+            DisplayName()
             
             HStack {
               Text("\(item.name)")
@@ -38,10 +36,7 @@ struct NodeRow: View {
             }
           }
           
-          if let val = item.value {
-            Text("\(val)")
-              .foregroundColor(.gray)
-          }
+          DisplayValue()
           
           if item.attributes.count > 0 {
             Button(action: {
@@ -67,6 +62,38 @@ struct NodeRow: View {
       .background(backgroundColor(), in: RoundedRectangle(cornerRadius: 4.0))
     }
   
+  @ViewBuilder func DisplayName() -> some View {
+    if let named = item.nameAttribute {
+      let idVal = item.idAttribute
+      Text("\(named) \( idVal != nil ? "(\(idVal!))" : item.name == "CustomField" ? ":" : "" )")
+    }
+  }
+  
+  @ViewBuilder func DisplayValue() -> some View {
+      if let val = item.value {
+        
+        if item.name == "Id" {
+          Button(action:{
+            withAnimation() {
+              viewModel.searchRequest = SearchRequest(searchText: val, searchType: .exactMatch)
+            }
+          }) {
+            Text("\(val)")
+          }
+        } else {
+          Text("\(val)")
+              .foregroundColor(.gray)
+        }
+        
+      } else if item.attributes.keys.contains("Value") {
+        if let val = item.attributes["Value"] {
+          Text("\(val)")
+        }
+      } else {
+        EmptyView()
+      }
+  }
+    
   func backgroundColor() -> Color {
     if viewModel.searchResultMatches.contains(item.id) {
       return Color.yellow.opacity(0.25)

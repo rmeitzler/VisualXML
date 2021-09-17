@@ -11,37 +11,54 @@ import XMLTree
 
 class VXMLViewModel: ObservableObject {
   @Published var xmlModel: [XMLTree] = []
+  
   @Published var searchResultsModel: [XMLTree] = []
+  @Published var searchRequest: SearchRequest = SearchRequest.empty()
   @Published var searchTerm: String = ""
-  @Published var searchText: String = ""
-  @Published var visibleNodeIds: [UUID] = []
+  //@Published var searchText: String = ""
   @Published var searchResultMatches: [UUID] = []
+  //@Published var searchType: XMLTree.XMLSearchType = .containsTerm
+  
+  @Published var searchHistory: [String] = []
+  @Published var visibleNodeIds: [UUID] = []
+  
   
   var cancellable: Set<AnyCancellable> = []
   
   init() {
-    $searchText
-      .debounce(for: .seconds(1), scheduler: RunLoop.main)
+    func clearSearch() {
+      visibleNodeIds = []
+      searchResultMatches = []
+      searchResultsModel = []
+    }
+    
+    $searchRequest
+      .debounce(for: .seconds(2), scheduler: RunLoop.main)
       .compactMap{ $0 }
       .sink { (_) in
-      } receiveValue: { [self] term in
-        
-        let results = XMLTree.search(node: xmlModel.first!, for: term)
-        searchTerm = term
-        
-        if results.count > 0 {
-          searchResultMatches = results.map({$0.id})
-          let visibleIds = collectVisibleIds(from: results)
-          
-          searchResultsModel = prepareResultsModel(visibleIds: visibleIds, matchingNodes: results)
-          
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            visibleNodeIds = visibleIds
-          }
+      } receiveValue: { [self] request in
+        if request.searchText == "" {
+          clearSearch()
         } else {
-          visibleNodeIds = []
-          searchResultMatches = []
-          searchResultsModel = []
+          var results: [XMLTree] = []
+          if let first = xmlModel.first {
+            results = XMLTree.search(node: first, for: request.searchText, type: request.searchType)
+          }
+          searchHistory.append(request.searchText)
+          searchTerm = request.searchText
+          
+          if results.count > 0 {
+            searchResultMatches = results.map({$0.id})
+            let visibleIds = collectVisibleIds(from: results)
+            
+            searchResultsModel = prepareResultsModel(visibleIds: visibleIds, matchingNodes: results)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+              visibleNodeIds = visibleIds
+            }
+          } else {
+            clearSearch()
+          }
         }
         
       }.store(in: &cancellable)
@@ -49,14 +66,28 @@ class VXMLViewModel: ObservableObject {
   
   func collectVisibleIds(from trees: [XMLTree]) -> [UUID] {
     var output: [UUID] = []
-    let mainIds: [UUID] = trees.map({$0.id})
+    let mainIds: [UUID] = trees.map({ $0.id })
     let parentIds: [UUID] = trees.flatMap({$0.breadcrumb.map({$0.id})})
+    let childrenIds:[UUID] = trees.flatMap({ spider($0, vals: []) })
+    print("visible kids:\( childrenIds )")
     
     output.append(contentsOf: mainIds)
     output.append(contentsOf: parentIds)
+    output.append(contentsOf: childrenIds)
     
     let out = output.unique()
     return out
+  }
+  
+  func spider(_ node: XMLTree, vals: [UUID]) -> [UUID] {
+    var mutableVals: [UUID] = vals
+    mutableVals.append(node.id)
+    
+    if let kids = node.children {
+      mutableVals = kids.flatMap({ spider($0, vals: mutableVals) })
+    }
+    
+    return mutableVals
   }
   
   func prepareResultsModel(visibleIds:[UUID], matchingNodes:[XMLTree]) -> [XMLTree] {

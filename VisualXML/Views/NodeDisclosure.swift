@@ -19,6 +19,17 @@ struct NodeDisclosure: View {
 //  @Binding var searchResults: [UUID]
 //  @Binding var expandedParents: [UUID]
   
+//  init(viewModel: VXMLViewModel, item itm: XMLTree, selectedTree: Binding<XMLTree?>){
+//    self.viewModel = viewModel
+//    item = itm
+//    _selectedTree = selectedTree
+//    
+//    defer {
+//      self.item = XMLTree(name: "", depth: 0, breadcrumb: [])
+//    }
+    
+//  }
+  
     var body: some View {
       //Group {
         if isVisible {
